@@ -15,7 +15,7 @@ def main(msg: func.QueueMessage) -> None:
     logging.info('Python queue trigger function processed a queue item: %s',
                  msg.get_body().decode('utf-8'))
     blob_name = msg.get_body().decode('utf-8')
-    connection_string = "DefaultEndpointsProtocol=https;AccountName=snibirkedastor;AccountKey=fBK9Yjan8Vo1vrFglaM1ZA/7aYwxzNqY97yqhHORZPA0GtphQe3I9VtbKeXdR2osQ4Hxv+2q/+rlzEX73Gu5Mw==;EndpointSuffix=core.windows.net"
+    connection_string = ""
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     start_time = time.perf_counter()
     try:
